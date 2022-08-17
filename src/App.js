@@ -11,10 +11,16 @@ function App() {
     localStorage.setItem('HIGH_SCORE', JSON.stringify(highScore))
   })
 
+
+  if (score > highScore) {
+    setHighScore(score)
+  }
+
+
   return (
     <>
       <Scoreboard score={score} highScore={highScore} />
-      <Main setScore={setScore} score={score} />
+      <Main setScore={setScore} score={score} highScore={highScore} setHighScore={setHighScore} />
     </>
   )
 }

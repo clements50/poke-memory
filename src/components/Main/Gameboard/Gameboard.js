@@ -5,7 +5,7 @@ import shufflePokemon from './shuffle'
 function Gameboard(props) {
   const [pokemons, setPokemon] = useState([])
   const [clickedPokemonCards, setClickedPokemonCards] = useState([])
-  const { setScore, score } = props
+  const { setScore, score, highScore, setHighScore} = props
 
   useEffect(() => {
     getPokeData()
@@ -45,8 +45,8 @@ function Gameboard(props) {
       setClickedPokemonCards([])
       shufflePokemon(pokemons)
     }
+    
   }
-
 
   return (
     <div className='gameboard'>
