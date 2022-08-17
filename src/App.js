@@ -14,7 +14,7 @@ function App() {
   return (
     <>
       <Scoreboard score={score} highScore={highScore} />
-      <Main />
+      <Main setScore={setScore} score={score} />
     </>
   )
 }
