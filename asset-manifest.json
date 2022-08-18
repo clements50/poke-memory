@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/poke-memory/static/css/main.b6b14745.css",
+    "main.js": "/poke-memory/static/js/main.6dd22d85.js",
+    "static/media/International_Pokémon_logo.svg.png": "/poke-memory/static/media/International_Pokémon_logo.svg.ea86272333083f516226.png",
+    "index.html": "/poke-memory/index.html",
+    "main.b6b14745.css.map": "/poke-memory/static/css/main.b6b14745.css.map",
+    "main.6dd22d85.js.map": "/poke-memory/static/js/main.6dd22d85.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6b14745.css",
+    "static/js/main.6dd22d85.js"
+  ]
+}
