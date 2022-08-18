@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Scoreboard from './components/Scoreboard/Scoreboard'
 import Main from './components/Main/Main'
+import Footer from './components/Footer/Footer'
 import './App.css'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <>
       <Scoreboard score={score} highScore={highScore} />
       <Main setScore={setScore} score={score} highScore={highScore} setHighScore={setHighScore} />
+      <Footer/>
     </>
   )
 }

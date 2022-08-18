@@ -1,27 +1,26 @@
 import { useState, useEffect } from 'react'
 import PokemonCard from '../PokemonCard/PokemonCard'
 import shufflePokemon from './shuffle'
+import styles from './Gameboard.module.css'
 
 function Gameboard(props) {
   const [pokemons, setPokemon] = useState([])
   const [clickedPokemonCards, setClickedPokemonCards] = useState([])
-  const { setScore, score, highScore, setHighScore} = props
+  const { setScore, score, highScore } = props
 
   useEffect(() => {
     getPokeData()
   }, [])
 
-
   async function getPokeData() {
     let newPokemons = []
 
-    for (let i = 1; i < 13; i++) {
+    for (let i = 1; i <= 15; i++) {
       const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
       const pokeData = await response.json();
 
       const newPokemon = { name: pokeData.name, image: pokeData.sprites.front_default }
       newPokemons.push(newPokemon)
-      setPokemon(pokemons.concat(newPokemon))
 
     }
 
@@ -45,11 +44,11 @@ function Gameboard(props) {
       setClickedPokemonCards([])
       shufflePokemon(pokemons)
     }
-    
+
   }
 
   return (
-    <div className='gameboard'>
+    <div className={styles.gameboard}>
       {
         pokemons.map(pokemon => <PokemonCard
           key={pokemon.name}
